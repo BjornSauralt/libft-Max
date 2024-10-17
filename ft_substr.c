@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   toupper.c                                          :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgarsaul <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mgarsaul <mgarsaul@student.42.fr>          #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 12:12:16 by mgarsaul          #+#    #+#             */
-/*   Updated: 2024/10/14 13:51:04 by mgarsaul         ###   ########.fr       */
+/*   Created: 2024-10-16 13:45:30 by mgarsaul          #+#    #+#             */
+/*   Updated: 2024-10-16 13:45:30 by mgarsaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/*#include "libft.h"
 
-int	ft_toupper(int car)
+char	*ft_substr(const char *s, unsigned int start, size_t size)
 {
-	if (car >= 97 && car <= 122)
-		return (car -= 32);
-	else
-		return (car);
-}
-/*
-int	main(void)
-{
-	printf("%d\n", ft_toupper(97));
-	return (0);
+
 }*/
+

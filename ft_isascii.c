@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-int	ft_isascii(int str)
+int	ft_isascii(int car)
 {
-	if ((str >= 0 && str <= 127))
+	if ((car >= 0 && car <= 127))
 		return (1);
 	else
 		return (0);

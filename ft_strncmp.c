@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-int	ft_strncmp(char *str1, char *str2, unsigned int n)
+int	ft_strncmp(const char *str1, const char *str2, size_t size)
 {
 	unsigned int	i;
 
 	i = -1;
-	while (++i < n && (*str1 || *str2))
+	while (++i < size && (*str1 || *str2))
 	{
 		if (str1[i] != str2[i])
 			return (str1[i] - str2[i]);
@@ -27,11 +27,11 @@ int	ft_strncmp(char *str1, char *str2, unsigned int n)
 /*
 int	main(void)
 {
-	int	n;
+	int	size;
 	char	str1[] = "bonjour";
 	char	str2[] = "bonjour";
 	
-	n = 5;
-	printf("%d\n", ft_strncmp(str1, str2, n));
+	size = 5;
+	printf("%d\n", ft_strncmp(str1, str2, size));
 	return (0);
 }*/

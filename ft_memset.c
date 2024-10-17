@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-void	*ft_memset(void *arr, int val, int size)
+void	*ft_memset(void *arr, int val, size_t size)
 {
-	int	valeur;
+	size_t	valeur;
 
 	valeur = 0;
 	while (valeur < size)

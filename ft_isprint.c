@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-int	ft_isprint(int str)
+int	ft_isprint(int car)
 {
-	if ((str >= 32 && str <= 126))
+	if ((car >= 32 && car <= 126))
 		return (1);
 	else
 		return (0);

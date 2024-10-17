@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   toupper.c                                          :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgarsaul <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mgarsaul <mgarsaul@student.42.fr>          #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 12:12:16 by mgarsaul          #+#    #+#             */
-/*   Updated: 2024/10/14 13:51:04 by mgarsaul         ###   ########.fr       */
+/*   Created: 2024-10-17 10:17:02 by mgarsaul          #+#    #+#             */
+/*   Updated: 2024-10-17 10:17:02 by mgarsaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int car)
+void	ft_putnbr_fd(int n, int fd)
 {
-	if (car >= 97 && car <= 122)
-		return (car -= 32);
-	else
-		return (car);
+	
 }
-/*
-int	main(void)
-{
-	printf("%d\n", ft_toupper(97));
-	return (0);
-}*/

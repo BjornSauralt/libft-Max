@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, void *src, int size)
+void	*ft_memcpy(void *dest, const void *src, size_t size)
 {
-	int	valeur;
+	size_t	valeur;
 
 	valeur = 0;
 	while (valeur < size)

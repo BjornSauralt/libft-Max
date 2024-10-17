@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-int	ft_tolower(int str)
+int	ft_tolower(int car)
 {
-	if (str >= 65 && str <= 90)
-		return (str += 32);
+	if (car >= 65 && car <= 90)
+		return (car += 32);
 	else
-		return (str);
+		return (car);
 }
 /*
 int	main(void)

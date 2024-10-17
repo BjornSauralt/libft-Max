@@ -12,10 +12,12 @@
 
 #include "libft.h"
 
-int	ft_memcmp(void *arr1, void *arr2, int size)
+int	ft_memcmp(const void *arr1, const void *arr2, size_t size)
 {
-	int	valeur;
+	size_t	valeur;
 
+	if (!size)
+		return (0);
 	valeur = 0;
 	while (valeur < size)
 	{

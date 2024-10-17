@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-int	ft_strlcat(char *dest, char *src, int size)
+int	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	int	valeur;
+	size_t	valeur;
 
 	valeur = 0;
 	if (size > 0)
@@ -25,4 +25,14 @@ int	ft_strlcat(char *dest, char *src, int size)
 			valeur++;
 		}
 	}
+	return (0);
 }
+/*
+int main(void)
+{
+	char    str1[] = "Hello !";
+	char    str2[] = "Hie !    ";
+
+	printf("%d\n", ft_strlcat(str1, str2, 1));
+	return (0);
+}*/

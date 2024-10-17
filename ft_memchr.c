@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-void	*ft_memchr(void *arr, int search, int size)
+void	*ft_memchr(const void *arr, int search, size_t size)
 {
-	int	valeur;
+	size_t	valeur;
 
 	valeur = 0;
 	if (!arr)

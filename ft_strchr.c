@@ -12,25 +12,28 @@
 
 #include "libft.h"
 
-char	*ft_strchr(char *str, int car)
+char	*ft_strchr(const char *str, int car)
 {
 	int	valeur;
 
-	valeur = -1;
-	while (str[++valeur])
+	valeur = 0;
+	if (!str)
+		return (NULL);
+	while (str[valeur] != '\0')
 	{
-		if (str[valeur] == car)
-			return (&str[valeur]);
+		if (str[valeur] == (char)car)
+			return ((char *)str + valeur);
+		valeur++;
 	}
+	if (str[valeur] == (char) car)
+		return ((char *) str + valeur);
 	return (NULL);
 }
 /*
 int	main(void)
 {
-	char	str[] = "jdsdadssdd";
-	int	car;
+	char s[] = "tripouille";
 
-	car = 97;
-	printf("%c\n", ft_strchr(str, car));
+	printf("%s\n", ft_strchr(s, 't' + 256));
 	return (0);
 }*/

@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-int	ft_isalpha(int str)
+int	ft_isalpha(int car)
 {
-	if (((str >= 'a' && str <= 'z'))
-		|| ((str >= 'A' && str <= 'Z')))
+	if (((car >= 'a' && car <= 'z'))
+		|| ((car >= 'A' && car <= 'Z')))
 		return (1);
 	else
 		return (0);

@@ -13,9 +13,9 @@
 #include "libft.h"
 //#define ELEMENT_COUNT 10
 
-void	*ft_memmove(void *dest, void *src, int size)
+void	*ft_memmove(void *dest, const void *src, size_t size)
 {
-	int	valeur;
+	size_t	valeur;
 
 	valeur = 0;
 	while (valeur < size)

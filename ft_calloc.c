@@ -1,47 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strrchr.c                                          :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgarsaul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 15:45:20 by mgarsaul          #+#    #+#             */
-/*   Updated: 2024/10/14 15:53:05 by mgarsaul         ###   ########.fr       */
+/*   Created: 2024/10/16 10:43:08 by mgarsaul          #+#    #+#             */
+/*   Updated: 2024/10/16 10:43:11 by mgarsaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *str)
+void	*ft_calloc(size_t elt, size_t size)
 {
-	int	valeur;
+	void	*valeur;
 
-	valeur = 0;
-	while (str[valeur])
-		valeur++;
+	valeur = (void *)malloc(elt * size);
+	if (!valeur)
+		return (NULL);
+	ft_bzero(valeur, elt);
 	return (valeur);
 }
 
-char	*ft_strrchr(char *str, int car)
-{
-	int	valeur;
-
-	valeur = ft_strlen(str);
-	while (valeur >= 0)
-	{
-		if (str[valeur] == (char) car)
-			return ((char *) str + valeur);
-		valeur--;
-	}
-	return (NULL);
-}
-/*
 int	main(void)
 {
-	char s[] = "tripouille";
-	int	car;
+	int	elt;
+	int	size;
 
-	car = 97;
-	printf("%d\n", ft_strrchr(s, 't') == s + 8);
+	size = 5;
+	elt = 9;
+	printf("%p\n", ft_calloc(elt, size));
 	return (0);
-}*/
+}
