@@ -12,17 +12,15 @@
 
 #include "libft.h"
 
-void	*ft_bzero(void *arr, size_t size)
+void	ft_bzero(void *arr, size_t size)
 {
-	size_t	valeur;
+	unsigned char	*valeur;
 
-	valeur = 0;
-	while (valeur < size)
+	valeur = (unsigned char *) arr;
+	while (size-- > 0)
 	{
-		*(unsigned int *)(arr + valeur) = (unsigned int) '0';
-		valeur++;
+		(*valeur++) = 0;
 	}
-	return (arr);
 }
 /*
 int main(void)

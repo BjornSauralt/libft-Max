@@ -23,19 +23,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		val++;
 	}
 }
-/*
-void	ft_modify_char(unsigned int index, char *c)
-{
-	if (*c >= 'a' && *c <= 'z')
-		*c = *c - 32;
-	printf("Index: %u, Caractère modifié: %c\n", index, *c);
-}
-
-int	main(void)
-{
-	char str[] = "hello world!";
-	printf("Avant modification: %s\n", str);
-	ft_striteri(str, ft_modify_char);
-	printf("Après modification: %s\n", str);
-	return (0);
-}*/

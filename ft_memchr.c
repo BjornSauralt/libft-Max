@@ -14,16 +14,16 @@
 
 void	*ft_memchr(const void *arr, int search, size_t size)
 {
-	size_t	valeur;
+	unsigned char	*str;
+	size_t			val;
 
-	valeur = 0;
-	if (!arr)
-		return (NULL);
-	while (valeur < size)
+	str = (unsigned char *)arr;
+	val = 0;
+	while (val < size)
 	{
-		if (*(unsigned int *)(arr + valeur) == (unsigned int )search)
-			return ((void *)arr + valeur);
-		valeur++;
+		if (str[val] == (unsigned char)search)
+			return ((void *)&str[val]);
+		val++;
 	}
 	return (NULL);
 }

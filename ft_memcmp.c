@@ -14,23 +14,21 @@
 
 int	ft_memcmp(const void *arr1, const void *arr2, size_t size)
 {
-	size_t	valeur;
+	const unsigned char	*str1;
+	const unsigned char	*str2;
 
-	if (!size)
-		return (0);
-	valeur = 0;
-	while (valeur < size)
+	str1 = (const unsigned char *)arr1;
+	str2 = (const unsigned char *)arr2;
+	if (size)
 	{
-		if (*(unsigned int *)(arr1 + valeur)
-		== *(unsigned int *)(arr2 + valeur))
-			valeur++;
-		else
-			return (*(unsigned int *)(arr1 + valeur)
-			- *(unsigned int *)(arr2 + valeur));
+		while (size--)
+		{
+			if (*str1++ != *str2++)
+				return (*(--str1) - *(--str2));
+		}
 	}
 	return (0);
 }
-
 /*
 int main(void)
 {

@@ -19,10 +19,10 @@ void	*ft_calloc(size_t elt, size_t size)
 	valeur = (void *)malloc(elt * size);
 	if (!valeur)
 		return (NULL);
-	ft_bzero(valeur, elt);
+	ft_bzero(valeur, elt * size);
 	return (valeur);
 }
-
+/*
 int	main(void)
 {
 	int	elt;
@@ -32,4 +32,4 @@ int	main(void)
 	elt = 9;
 	printf("%p\n", ft_calloc(elt, size));
 	return (0);
-}
+}*/

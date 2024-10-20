@@ -21,7 +21,7 @@ void	ft_putendl_fd(char *str, int fd)
 	{
 		write (fd, str, val);
 		val++;
-		write(1, '\n', 1);
+		write(fd, "\n", 1);
 	}
 }
 /*
