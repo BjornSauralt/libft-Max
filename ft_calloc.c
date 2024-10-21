@@ -12,24 +12,48 @@
 
 #include "libft.h"
 
-void	*ft_calloc(size_t elt, size_t size)
+static void	*ft_memalloc(size_t size)
 {
-	void	*valeur;
+	void	*new;
+	size_t	i;
 
-	valeur = (void *)malloc(elt * size);
-	if (!valeur)
+	new = (void *) malloc(size);
+	if (!new)
 		return (NULL);
-	ft_bzero(valeur, elt * size);
-	return (valeur);
+	i = 0;
+	while (i < size)
+	{
+		*(unsigned char *)(new + i) = 0;
+		i++;
+	}
+	return (new);
+}
+
+void	*ft_calloc(size_t count, size_t size)
+{
+	if (size != 0 && count > ((size_t) -1 / size))
+		return (NULL);
+	return (ft_memalloc(count * size));
 }
 /*
 int	main(void)
 {
-	int	elt;
-	int	size;
+	int	*arr;
+	size_t	n = 5;
+	size_t	size = sizeof(int);
 
-	size = 5;
-	elt = 9;
-	printf("%p\n", ft_calloc(elt, size));
+	arr = (int *)ft_calloc(5, 1);
+	if (!arr)
+	{
+		printf("Erreur : échec de l'allocation mémoire\n");
+		return (1);
+	}
+	printf("Contenu du tableau alloué :\n");
+	for (size_t i = 0; i < n; i++)
+	{
+		printf("arr[%zu] = %d\n", i, arr[i]);
+	}
+	free(arr);
+
 	return (0);
 }*/

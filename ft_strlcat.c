@@ -12,27 +12,40 @@
 
 #include "libft.h"
 
-int	ft_strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	size_t	valeur;
+	size_t	dest_len;
+	size_t	src_len;
+	size_t	i;
+	size_t	j;
 
-	valeur = 0;
-	if (size > 0)
+	dest_len = 0;
+	src_len = 0;
+	i = 0;
+
+	while (dest[dest_len] != '\0' && dest_len < size)
+		dest_len++;
+	while (src[src_len] != '\0')
+		src_len++;
+	if (size <= dest_len)
+		return (size + src_len);
+	j = dest_len;
+	while (src[i] != '\0' && j < size - 1)
 	{
-		while (src[valeur] && valeur < size - 1)
-		{
-			dest[valeur] = src[valeur];
-			valeur++;
-		}
+		dest[j] = src[i];
+		i++;
+		j++;
 	}
-	return (0);
+	if (j < size)
+		dest[j] = '\0';
+	return (dest_len + src_len);
 }
 /*
 int main(void)
 {
-	char    str1[] = "Hello !";
-	char    str2[] = "Hie !    ";
+	char dest[30]; memset(dest, 0, 30);
+	char * src = (char *)"AAAAAAAAA";
 
-	printf("%d\n", ft_strlcat(str1, str2, 1));
+	printf("%d\n", ft_strlcat(dest, src, 1));
 	return (0);
 }*/

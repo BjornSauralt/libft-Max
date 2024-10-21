@@ -19,10 +19,10 @@ void	ft_putendl_fd(char *str, int fd)
 	val = 0;
 	while (str[val])
 	{
-		write (fd, str, val);
+		write (fd, &str[val], 1);
 		val++;
-		write(fd, "\n", 1);
 	}
+	write(fd, "\n", 1);
 }
 /*
 int	main(void)

@@ -15,23 +15,42 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	size_t	j;
+	size_t	str_len;
 	char	*str;
 
+	str_len = strlen(s);
+	if (start >= str_len)
+		return (strdup(""));
+	if (len > str_len - start)
+		len = str_len - start;
 	str = (char *)malloc(sizeof (*s) * (len + 1));
 	if (!str)
 		return (NULL);
 	i = 0;
-	j = 0;
-	while (s[i])
+	while (i < len)
 	{
-		if (i >= start && j < len)
-		{
-			str[j] = s[i];
-			j++;
-		}
+		str[i] = s[start + i];
 		i++;
 	}
-	str[j] = 0;
+	str[i] = '\0';
 	return (str);
 }
+/*
+int	main(void)
+{
+	char *source = "Hello, World!";
+	char *sub;
+
+	sub = ft_substr(source, 7, 5);
+	if (sub)
+	{
+		printf("Sous-chaîne : %s\n", sub);
+		free(sub);
+	}
+	else
+	{
+		printf("Erreur d'allocation.\n");
+	}
+
+	return 0;
+}*/

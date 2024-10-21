@@ -32,24 +32,25 @@ int	ft_atoi(const char *nbr)
 	}
 	while (nbr[i] >= '0' && nbr[i] <= '9')
 	{
-		valeur = valeur * 10 + nbr[i] - 10;
+		valeur = valeur * 10 + nbr[i] - '0';
 		i++;
 	}
 	return (valeur * negatif);
 }
 /*
-int	main(int argc, char *argv[])
+int main(void)
 {
-	int	sum;
+	const char *str1 = "   1234";
+	const char *str2 = "   -5678";
+	const char *str3 = "   +9012";
+	const char *str4 = "   42abc";
+	const char *str5 = "   -0";
 
-	sum = 0;
-	while (argc != 0)
-	{
-		sum += ft_atoi(*argv++);
-		argc--;
+	printf("Conversion de '%s': %d\n", str1, ft_atoi(str1));
+	printf("Conversion de '%s': %d\n", str2, ft_atoi(str2));
+	printf("Conversion de '%s': %d\n", str3, ft_atoi(str3));
+	printf("Conversion de '%s': %d\n", str4, ft_atoi(str4));
+	printf("Conversion de '%s': %d\n", str5, ft_atoi(str5));
 
-	}
-	printf ("La somme des valeurs saisies est de %d.\n", sum);
-
-	return (0);
+	return 0;
 }*/
