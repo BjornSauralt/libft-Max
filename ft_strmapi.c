@@ -12,6 +12,24 @@
 
 #include "libft.h"
 
+int	ft_toupper(int car)
+{
+	if (car >= 97 && car <= 122)
+		return (car -= 32);
+	else
+		return (car);
+}
+
+size_t	ft_strlen(const char *str)
+{
+	int	valeur;
+
+	valeur = 0;
+	while (str[valeur])
+		valeur++;
+	return (valeur);
+}
+
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*ret;
@@ -31,3 +49,21 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	ret[i] = 0;
 	return (ret);
 }
+/*
+int	main(void)
+{
+	const char	*str = "hello world!";
+	char		*result;
+
+	result = ft_strmapi(str, ft_toupper);
+
+	if (result)
+	{
+		printf("Original: %s\n", str);
+		printf("Transformed: %s\n", result);
+		free(result);
+	}
+	else
+		printf("erreur\n");
+	return (0);
+}*/

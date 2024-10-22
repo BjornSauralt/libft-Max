@@ -23,3 +23,16 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		val++;
 	}
 }
+/*
+void	print_index_char(unsigned int index, char *c) 
+{
+	printf("Index: %u, Character: %c\n", index, *c);
+}
+
+int	main(void)
+{
+	char str[] = "Hello, world!";
+
+	ft_striteri(str, print_index_char);
+	return (0);
+}*/

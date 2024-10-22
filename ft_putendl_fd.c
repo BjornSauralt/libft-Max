@@ -25,8 +25,11 @@ void	ft_putendl_fd(char *str, int fd)
 	write(fd, "\n", 1);
 }
 /*
-int	main(void)
+int main(void)
 {
-	ft_putendl_fd("c", 1);
-	return (0);
+	int	fd = open("output.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
+    
+	ft_putendl_fd("Hello, World!", fd);
+	close(fd);
+	return 0;
 }*/

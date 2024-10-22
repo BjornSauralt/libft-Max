@@ -30,7 +30,6 @@ static int	find_str(char const *s, char c)
 			nb_str++;
 			while (s[i] && s[i] == c)
 				i++;
-			continue ;
 		}
 		i++;
 	}
@@ -57,7 +56,7 @@ static void	ft_next_str(char **next_str, size_t *next_strlen, char c)
 	}
 }
 
-static char	**handle_malloc_err(char **tab)
+static char	**malloc_err(char **tab)
 {
 	int	i;
 
@@ -91,7 +90,7 @@ char	**ft_split(char const *s, char c)
 		ft_next_str(&next_str, &next_strlen, c);
 		tab[i] = (char *)malloc(sizeof(char) * (next_strlen + 1));
 		if (!tab[i])
-			return (handle_malloc_err(tab));
+			return (malloc_err(tab));
 		ft_strlcpy(tab[i], next_str, next_strlen + 1);
 	}
 	tab[i] = NULL;

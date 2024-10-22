@@ -22,6 +22,10 @@ int	ft_tolower(int car)
 /*
 int	main(void)
 {
-	printf("%d\n", ft_tolower(97));
+	int	i = 0;
+	char	test_chars[] = {'A'};
+	char	lower_char = ft_tolower(test_chars[i]);
+
+	printf("ft_tolower('%c') = '%c'\n", test_chars[i], lower_char);
 	return (0);
 }*/

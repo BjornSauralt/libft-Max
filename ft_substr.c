@@ -44,13 +44,11 @@ int	main(void)
 	sub = ft_substr(source, 7, 5);
 	if (sub)
 	{
-		printf("Sous-chaîne : %s\n", sub);
+		printf("%s\n", sub);
 		free(sub);
 	}
 	else
-	{
 		printf("Erreur d'allocation.\n");
-	}
 
-	return 0;
+	return (0);
 }*/

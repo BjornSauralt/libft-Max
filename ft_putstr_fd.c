@@ -26,6 +26,9 @@ void	ft_putstr_fd(char *str, int fd)
 /*
 int	main(void)
 {
-	ft_putstr_fd("c", 1);
-	return (0);
+	int	fd = open("output.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
+
+	ft_putstr_fd("Hello, World!", fd);
+	close(fd);
+	return 0;
 }*/

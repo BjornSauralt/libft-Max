@@ -31,11 +31,14 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	return (valeur);
 }
 /*
-int main(void)
+int	main(void)
 {
-	char    str1[] = "Hello !";
-	char    str2[] = "Hie !    ";
+	char	src[] = "Hello, World!";
+	char	dest[20];
+	size_t	result;
 
-	printf("%d\n", ft_strlcpy(str1, str2, 1));
+	result = ft_strlcpy(dest, src, sizeof(dest));
+	printf("Dest: %s\n", dest);
+	printf("%zu\n", result);
 	return (0);
 }*/

@@ -24,6 +24,6 @@ size_t	ft_strlen(const char *str)
 /*
 int	main(void)
 {
-	printf("%d\n", ft_strlen("dayid"));
+	printf("%ld\n", ft_strlen("dayid"));
 	return (0);
 }*/

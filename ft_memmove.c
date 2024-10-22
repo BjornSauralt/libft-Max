@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-//#define ELEMENT_COUNT 10
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -37,34 +36,14 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-
 /*
-int	main(void) 
+int	main(void)
 {
-	// On crée une zone de mémoire de 10 entiers et contenant
-	// que neuf valeurs. La dixième est non utilisée (0).
-	int data[] = { 20, 30, 40, 50, 60, 70, 80, 90, 100, 0 };
+	char src1[] = "Hello, World!";
+	char dst1[20];
 
-	// On affiche le contenu de la collection
-	for( int i=0; i<ELEMENT_COUNT; i++ ) {
-		printf( "%d ", data[i] );
-	}
-	puts( "" );  // Un retour à la ligne
-
-	// On décale les éléménts dans la collection ...
-	void * source = (void *) data;
-	void * destination = (void *) ( data + 1 );
-	size_t size = ELEMENT_COUNT * sizeof( int );
-	memmove( destination, source, size );
-
-	// ... pour y insérer une nouvelle valeur en tête
-	data[0] = 10;
-
-	// On affiche le contenu de la collection
-	for( int i=0; i<ELEMENT_COUNT; i++ ) {
-		printf( "%d ", data[i] );
-	}
-	puts( "" );  // Un retour à la ligne
-
+	printf("Avant memmove :%s\n", dst1);
+	ft_memmove(dst1, src1, 13);
+	printf("Après memmove:%s\n", dst1);
 	return (0);
 }*/

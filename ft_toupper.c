@@ -22,6 +22,10 @@ int	ft_toupper(int car)
 /*
 int	main(void)
 {
-	printf("%d\n", ft_toupper(97));
+	int	i = 0;
+	char	test_chars[] = {'a'};
+	char	upper_char = ft_toupper(test_chars[i]);
+
+	printf("ft_toupper('%c') = '%c'\n", test_chars[i], upper_char);
 	return (0);
 }*/

@@ -12,6 +12,16 @@
 
 #include "libft.h"
 
+size_t	ft_strlen(const char *str)
+{
+	int	valeur;
+
+	valeur = 0;
+	while (str[valeur])
+		valeur++;
+	return (valeur);
+}
+
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	len_n;
@@ -35,3 +45,19 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
+/*
+int	main(void)
+{
+	const char	*big = "Hello, welcome";
+	const char	*little = "Hello";
+	size_t		len = 40;
+	char		*result = ft_strnstr(big, little, len);
+
+	if (result)
+	{
+		printf("'%s' trouve, position: %ld\n", little, result - big);
+	}
+	else
+		printf("'%s' pas trouve\n", little);
+	return (0);
+}*/

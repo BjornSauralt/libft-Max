@@ -28,11 +28,18 @@ void	*ft_memchr(const void *arr, int search, size_t size)
 	return (NULL);
 }
 /*
-int main(void)
+int	main(void)
 {
-	char    arr[12];
+	char arr[] = "Hello, World!";
+	char search = 'a';
+	char *result;
 
-	ft_memchr(arr, 'A', 11));
-	printf("%s\n", arr);
+	result = (char *)ft_memchr(arr, search, strlen(arr));
+
+	if (result != NULL)
+		printf("Caractère '%c' trouvé à l'adresse : %p\n", search, result);
+	else
+		printf("Caractère '%c' non trouvé.\n", search);
+
 	return (0);
 }*/

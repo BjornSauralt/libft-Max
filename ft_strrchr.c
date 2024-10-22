@@ -38,10 +38,15 @@ char	*ft_strrchr(char *str, int car)
 /*
 int	main(void)
 {
-	char s[] = "tripouille";
-	int	car;
+	char	str[] = "Hello, World!";
+	char	characterToFind = 'a';
+	char	*result = ft_strrchr(str, characterToFind);
 
-	car = 97;
-	printf("%d\n", ft_strrchr(s, 't') == s + 8);
+	if (result != NULL)
+	{
+		printf("'%c' est à l'index : %ld\n", characterToFind, result - str);
+	}
+	else 
+		printf("'%c' non trouve\n", characterToFind);
 	return (0);
 }*/

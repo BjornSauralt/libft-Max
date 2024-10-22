@@ -19,23 +19,26 @@ int	ft_memcmp(const void *arr1, const void *arr2, size_t size)
 
 	str1 = (const unsigned char *)arr1;
 	str2 = (const unsigned char *)arr2;
-	if (size)
+	if (!size)
+		return (0);
+	while (size--)
 	{
-		while (size--)
-		{
-			if (*str1++ != *str2++)
-				return (*(--str1) - *(--str2));
-		}
+		if (*str1++ != *str2++)
+			return (*(--str1) - *(--str2));
 	}
 	return (0);
 }
 /*
-int main(void)
+int	main(void)
 {
-	char    arr1[] = "Hello";
-	//char    arr2[] = "Hello";
-	int resultat = ft_memcmp(arr1, arr1, 5);
+	char arr1[] = "Hello, World!";
+	char arr2[] = "Hello, World!";
+	size_t	size = 13;
+	int result1 = ft_memcmp(arr1, arr2, size);
 	
-	printf("%d\n", resultat);
-	return (0);
+	if (result1 == 0)
+		printf("arr1 et arr2 sont identiques.\n");
+	else
+		printf("arr1 et arr2 sont différents (resultat: %d).\n", result1);
+	return 0;
 }*/

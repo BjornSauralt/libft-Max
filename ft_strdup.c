@@ -36,8 +36,19 @@ char	*ft_strdup(const char *src)
 	return (str);
 }
 /*
-int	main(void)
+int	main(void) 
 {
-	printf("le resultat est : '%s'\n", ft_strdup("adiadayv"));
+	const	char *original = "Hello, world!";
+	char	*duplicate;
+
+	duplicate = ft_strdup(original);
+	if (duplicate == NULL)
+	{
+		fprintf(stderr, "Erreur\n");
+		return (1);
+	}
+	printf("Chaîne d'origine: %s\n", original);
+	printf("Chaîne dupliquée: %s\n", duplicate);
+	free(duplicate);
 	return (0);
-}*/	
+}*/

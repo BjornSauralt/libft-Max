@@ -25,20 +25,20 @@ void	ft_bzero(void *arr, size_t n)
 /*
 int	main(void)
 {
-	char	buffer[10];
+	char	arr[10];
 
-	strcpy(buffer, "Hello!");
-	printf("Avant ft_bzero: %s\n", buffer);
-	ft_bzero(buffer, 3);
+	strcpy(arr, "Hello!");
+	printf("Avant ft_bzero: %s\n", arr);
+	ft_bzero(arr, 3);
 	printf("Après ft_bzero sur les 3 premiers octets: ");
 	for (int i = 0; i < 10; i++)
 	{
-		if (buffer[i] == 0)
+		if (arr[i] == 0)
 			printf("\\0");
 		else
-			printf("%c", buffer[i]);
+			printf("%c", arr[i]);
 	}
 	printf("\n");
 
-	return 0;
+	return (0);
 }*/

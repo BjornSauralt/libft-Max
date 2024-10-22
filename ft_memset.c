@@ -24,9 +24,11 @@ void	*ft_memset(void *b, int c, size_t len)
 /*
 int	main(void)
 {
-	char	arr[9];
+	char array[10];
 
-	ft_memset(arr, 'A', 10);
-	printf("%s\n", arr);
-	return (0);
+	ft_memset(array, 'A', sizeof(array));
+	for (int i = 0; i < 10; i++)
+		printf("%c ", array[i]);
+	printf("\n");
+	return 0;
 }*/

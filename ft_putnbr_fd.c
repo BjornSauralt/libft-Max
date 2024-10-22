@@ -35,10 +35,10 @@ void	ft_putnbr_fd(int nb, int fd)
 /*
 int main(void)
 {
-	int	a = 3;
-	int	b = 5;
+	int	fd = open("output.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
 
-	ft_putnbr_fd(b, a);
-	printf ("%d\n", b);
-	return (0);
+	ft_putnbr_fd(-12345, fd);
+	ft_putchar_fd('\n', fd);
+	close(fd);
+	return 0;
 }*/

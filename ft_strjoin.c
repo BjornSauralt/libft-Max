@@ -12,6 +12,16 @@
 
 #include "libft.h"
 
+size_t	ft_strlen(const char *str)
+{
+	int	valeur;
+
+	valeur = 0;
+	while (str[valeur])
+		valeur++;
+	return (valeur);
+}
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
@@ -38,3 +48,19 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[j] = 0;
 	return (str);
 }
+/*
+int	main(void)
+{
+	char	*s1 = "Bonjour, ";
+	char	*s2 = "comment ça va ?";
+	char	*result = ft_strjoin(s1, s2);
+
+	if (result)
+	{
+		printf("%s\n", result);
+		free(result);
+	}
+	else
+		fprintf(stderr, "Erreur\n");
+	return (0);
+}*/

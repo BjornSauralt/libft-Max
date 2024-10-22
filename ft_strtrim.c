@@ -12,6 +12,40 @@
 
 #include "libft.h"
 
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	size_t	i;
+	size_t	str_len;
+	char	*str;
+
+	str_len = strlen(s);
+	if (start >= str_len)
+		return (strdup(""));
+	if (len > str_len - start)
+		len = str_len - start;
+	str = (char *)malloc(sizeof (*s) * (len + 1));
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (i < len)
+	{
+		str[i] = s[start + i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
+}
+
+size_t	ft_strlen(const char *str)
+{
+	int	valeur;
+
+	valeur = 0;
+	while (str[valeur])
+		valeur++;
+	return (valeur);
+}
+
 static int	ft_isset(char c, const char *set)
 {
 	while (*set)
@@ -37,3 +71,14 @@ char	*ft_strtrim(const char *s1, const char *set)
 	ret = ft_substr(start, 0, end - start);
 	return (ret);
 }
+/*
+int	main(void)
+{
+	const char	*test = "!!!Hello, World!!!";
+	const char	*set = "!";
+	char		*resultat = ft_strtrim(test, set);
+
+	printf("original: '%s', Trimme: '%s'\n", test, resultat);
+	free(resultat);
+	return (0);
+}*/
