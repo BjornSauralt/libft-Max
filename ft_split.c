@@ -12,6 +12,25 @@
 
 #include "libft.h"
 
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+{
+	size_t	valeur;
+
+	valeur = 0;
+	if (size > 0)
+	{
+		while (src[valeur] && valeur < size - 1)
+		{
+			dest[valeur] = src[valeur];
+			valeur++;
+		}
+		dest[valeur] = 0;
+	}
+	while (src[valeur])
+		valeur++;
+	return (valeur);
+}
+
 static int	find_str(char const *s, char c)
 {
 	int	i;
@@ -30,6 +49,7 @@ static int	find_str(char const *s, char c)
 			nb_str++;
 			while (s[i] && s[i] == c)
 				i++;
+			continue ;
 		}
 		i++;
 	}
@@ -38,7 +58,7 @@ static int	find_str(char const *s, char c)
 	return (nb_str);
 }
 
-static void	ft_next_str(char **next_str, size_t *next_strlen, char c)
+static void	get_next_str(char **next_str, size_t *next_strlen, char c)
 {
 	size_t	i;
 
@@ -56,7 +76,7 @@ static void	ft_next_str(char **next_str, size_t *next_strlen, char c)
 	}
 }
 
-static char	**malloc_err(char **tab)
+static char	**handle_malloc_err(char **tab)
 {
 	int	i;
 
@@ -87,12 +107,41 @@ char	**ft_split(char const *s, char c)
 	next_strlen = 0;
 	while (++i < find_str(s, c))
 	{
-		ft_next_str(&next_str, &next_strlen, c);
+		get_next_str(&next_str, &next_strlen, c);
 		tab[i] = (char *)malloc(sizeof(char) * (next_strlen + 1));
 		if (!tab[i])
-			return (malloc_err(tab));
+			return (handle_malloc_err(tab));
 		ft_strlcpy(tab[i], next_str, next_strlen + 1);
 	}
 	tab[i] = NULL;
 	return (tab);
+}
+
+int	main(void)
+{
+	char	**result;
+	char	*str = "  tripouille  42  ";
+	char	delimiter = ' ';
+	int		i;
+
+	result = ft_split(str, delimiter);
+	if (!result)
+	{
+		printf("Erreur\n");
+		return (1);
+	}
+	i = 0;
+	while (result[i])
+	{
+		printf("%s\n", result[i]);
+		i++;
+	}
+	i = 0;
+	while (result[i])
+	{
+		free(result[i]);
+		i++;
+	}
+	free(result);
+	return (0);
 }

@@ -69,3 +69,15 @@ char	*ft_itoa(int n)
 	tmp = convert(tmp, nb, i);
 	return (tmp);
 }
+/*
+int	main(void)
+{
+	int		num;
+	char	*str;
+
+	num = -456;
+	str = ft_itoa(num);
+	printf("%s\n", str);
+	free(str);
+	return (0);
+}*/
