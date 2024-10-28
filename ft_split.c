@@ -12,25 +12,6 @@
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
-{
-	size_t	valeur;
-
-	valeur = 0;
-	if (size > 0)
-	{
-		while (src[valeur] && valeur < size - 1)
-		{
-			dest[valeur] = src[valeur];
-			valeur++;
-		}
-		dest[valeur] = 0;
-	}
-	while (src[valeur])
-		valeur++;
-	return (valeur);
-}
-
 static int	find_str(char const *s, char c)
 {
 	int	i;
@@ -116,7 +97,7 @@ char	**ft_split(char const *s, char c)
 	tab[i] = NULL;
 	return (tab);
 }
-
+/*
 int	main(void)
 {
 	char	**result;
@@ -144,4 +125,4 @@ int	main(void)
 	}
 	free(result);
 	return (0);
-}
+}*/

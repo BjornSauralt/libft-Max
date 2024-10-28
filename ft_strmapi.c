@@ -12,24 +12,6 @@
 
 #include "libft.h"
 
-int	ft_toupper(int car)
-{
-	if (car >= 97 && car <= 122)
-		return (car -= 32);
-	else
-		return (car);
-}
-
-size_t	ft_strlen(const char *str)
-{
-	int	valeur;
-
-	valeur = 0;
-	while (str[valeur])
-		valeur++;
-	return (valeur);
-}
-
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*ret;

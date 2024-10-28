@@ -17,8 +17,8 @@ char	*ft_strchr(const char *str, int car)
 	int	valeur;
 
 	valeur = 0;
-	if (!str)
-		return (NULL);
+	if ((char)car == '\0')
+		return ((char *) ft_strlen(str));
 	while (str[valeur] != '\0')
 	{
 		if (str[valeur] == (char)car)

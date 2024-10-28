@@ -15,7 +15,7 @@
 void	ft_bzero(void *arr, size_t n)
 {
 	unsigned char	*valeur;
-	size_t	i;
+	size_t			i;
 
 	i = 0;
 	valeur = (unsigned char *) arr;

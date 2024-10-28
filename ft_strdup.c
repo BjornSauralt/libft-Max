@@ -20,8 +20,6 @@ char	*ft_strdup(const char *src)
 
 	len = 0;
 	i = 0;
-	if (!src)
-		return (NULL);
 	while (src[len])
 		++len;
 	str = (char *) malloc(sizeof(*str) * (len + 1));
@@ -38,17 +36,20 @@ char	*ft_strdup(const char *src)
 /*
 int	main(void) 
 {
-	const	char *original = "Hello, world!";
+	const	char *original = NULL;
 	char	*duplicate;
 
 	duplicate = ft_strdup(original);
-	if (duplicate == NULL)
-	{
-		fprintf(stderr, "Erreur\n");
-		return (1);
-	}
 	printf("Chaîne d'origine: %s\n", original);
 	printf("Chaîne dupliquée: %s\n", duplicate);
+	free(duplicate);
+
+		const	char *original1 = NULL;
+	char	*duplicate1;
+
+	duplicate1 = strdup(original1);
+	printf("Chaîne d'origine fonction origine: %s\n", original1);
+	printf("Chaîne dupliquée fonction origine: %s\n", duplicate1);
 	free(duplicate);
 	return (0);
 }*/

@@ -12,16 +12,6 @@
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
-{
-	int	valeur;
-
-	valeur = 0;
-	while (str[valeur])
-		valeur++;
-	return (valeur);
-}
-
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;

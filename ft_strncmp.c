@@ -19,8 +19,8 @@ int	ft_strncmp(const char *str1, const char *str2, size_t size)
 	i = -1;
 	while (++i < size && (*str1 || *str2))
 	{
-		if (str1[i] != str2[i])
-			return (str1[i] - str2[i]);
+		if ((unsigned int)str1[i] != (unsigned int)str2[i])
+			return ((unsigned char)str1[i] - ((unsigned char)str2[i]));
 	}
 	return (0);
 }
