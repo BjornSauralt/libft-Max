@@ -18,7 +18,7 @@ char	*ft_strchr(const char *str, int car)
 
 	valeur = 0;
 	if ((char)car == '\0')
-		return ((char *) ft_strlen(str));
+		return ((char *)str + ft_strlen(str));
 	while (str[valeur] != '\0')
 	{
 		if (str[valeur] == (char)car)
@@ -32,8 +32,9 @@ char	*ft_strchr(const char *str, int car)
 /*
 int	main(void)
 {
-	char s[] = "tripouille";
+	char s[] = "ababtxv";
 
-	printf("%s\n", ft_strchr(s, 't'));
+	printf("%s\n", strchr(s, '0'));
+	printf("%s\n", ft_strchr(s, '0'));
 	return (0);
 }*/

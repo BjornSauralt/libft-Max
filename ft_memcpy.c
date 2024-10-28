@@ -35,9 +35,12 @@ int main(void)
 	   
 	copy = (int *) malloc( length );
 	ft_memcpy( copy, array, length );
-		
-	while (length=0; length<5; length++) {
+	
+	lenght = 0;
+	while (length < 5)
+	{
 		printf ( "%d ", copy[ length ] );
+		lenght++
 	}
 	printf ( "\n" );
 	free (copy);
