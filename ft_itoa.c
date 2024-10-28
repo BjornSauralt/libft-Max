@@ -75,7 +75,7 @@ int	main(void)
 	int		num;
 	char	*str;
 
-	num = -456;
+	num = +456;
 	str = ft_itoa(num);
 	printf("%s\n", str);
 	free(str);

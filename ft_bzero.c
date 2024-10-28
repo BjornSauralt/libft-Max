@@ -15,11 +15,14 @@
 void	ft_bzero(void *arr, size_t n)
 {
 	unsigned char	*valeur;
+	size_t	i;
 
+	i = 0;
 	valeur = (unsigned char *) arr;
-	while (n-- > 0)
+	while (i < n)
 	{
 		*valeur++ = 0;
+		i++;
 	}
 }
 /*
@@ -30,7 +33,7 @@ int	main(void)
 	strcpy(arr, "Hello!");
 	printf("Avant ft_bzero: %s\n", arr);
 	ft_bzero(arr, 3);
-	printf("Après ft_bzero sur les 3 premiers octets: ");
+	printf("Apres ft_bzero : ");
 	for (int i = 0; i < 10; i++)
 	{
 		if (arr[i] == 0)

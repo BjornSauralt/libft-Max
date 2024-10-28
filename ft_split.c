@@ -65,7 +65,7 @@ static void	get_next_str(char **next_str, size_t *next_strlen, char c)
 	*next_str += *next_strlen;
 	*next_strlen = 0;
 	i = 0;
-	while (**next_str && **next_str == c)
+	while (**next_str == c)
 		(*next_str)++;
 	while ((*next_str)[i])
 	{
@@ -76,7 +76,7 @@ static void	get_next_str(char **next_str, size_t *next_strlen, char c)
 	}
 }
 
-static char	**handle_malloc_err(char **tab)
+static char	**malloc_err(char **tab)
 {
 	int	i;
 
@@ -110,7 +110,7 @@ char	**ft_split(char const *s, char c)
 		get_next_str(&next_str, &next_strlen, c);
 		tab[i] = (char *)malloc(sizeof(char) * (next_strlen + 1));
 		if (!tab[i])
-			return (handle_malloc_err(tab));
+			return (malloc_err(tab));
 		ft_strlcpy(tab[i], next_str, next_strlen + 1);
 	}
 	tab[i] = NULL;

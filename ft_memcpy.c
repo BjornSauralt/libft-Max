@@ -31,11 +31,12 @@ int main(void)
 	int	array [] = { 54, 85, 20, 63, 21 };
 	int	* copy = NULL;
 	int	length = sizeof( int ) * 5;
+	i = 0;
 	   
 	copy = (int *) malloc( length );
 	ft_memcpy( copy, array, length );
 		
-	for (length=0; length<5; length++) {
+	while (length=0; length<5; length++) {
 		printf ( "%d ", copy[ length ] );
 	}
 	printf ( "\n" );
