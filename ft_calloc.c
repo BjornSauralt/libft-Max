@@ -40,18 +40,20 @@ int	main(void)
 {
 	int	*arr;
 	size_t	n = 5;
-	size_t	size = sizeof(int);
+	size_t	i;
 
+	i = 0;
 	arr = (int *)ft_calloc(5, 1);
 	if (!arr)
 	{
-		printf("Erreur : échec de l'allocation mémoire\n");
+		printf("Erreur : echec de l'allocation memoire\n");
 		return (1);
 	}
-	printf("Contenu du tableau alloué :\n");
-	for (size_t i = 0; i < n; i++)
+	printf("Contenu du tableau alloue :\n");
+	while (i < n)
 	{
 		printf("arr[%zu] = %d\n", i, arr[i]);
+		i++;
 	}
 	free(arr);
 

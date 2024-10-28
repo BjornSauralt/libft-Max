@@ -29,17 +29,20 @@ void	ft_bzero(void *arr, size_t n)
 int	main(void)
 {
 	char	arr[10];
+	int	i;
 
+	i = 0;
 	strcpy(arr, "Hello!");
 	printf("Avant ft_bzero: %s\n", arr);
 	ft_bzero(arr, 3);
 	printf("Apres ft_bzero : ");
-	for (int i = 0; i < 10; i++)
+	while (i < 10)
 	{
 		if (arr[i] == 0)
 			printf("\\0");
 		else
 			printf("%c", arr[i]);
+		i++;
 	}
 	printf("\n");
 
