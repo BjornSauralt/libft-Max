@@ -34,7 +34,7 @@ int	main(void)
 {
 	char s[] = "ababtxv";
 
-	printf("%s\n", strchr(s, '0'));
-	printf("%s\n", ft_strchr(s, '0'));
+	printf("%s\n", strchr(s, 't'));
+	printf("%s\n", ft_strchr(s, 't'));
 	return (0);
 }*/

@@ -30,7 +30,7 @@ static int	int_len(long n)
 	return (len);
 }
 
-char	*convert(char *tmp, long n, int len)
+static char	*convert(char *tmp, long n, int len)
 {
 	if (n < 0)
 	{
@@ -80,4 +80,5 @@ int	main(void)
 	printf("%s\n", str);
 	free(str);
 	return (0);
-}*/
+}
+*/

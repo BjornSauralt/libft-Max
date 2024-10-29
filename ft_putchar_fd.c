@@ -19,7 +19,7 @@ void	ft_putchar_fd(char c, int fd)
 /*
 int main(void)
 {
-	int	fd = open("output.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
+	int	fd = open("output.txt", O_WRONLY | O_CREAT, 0644);
 
 	ft_putchar_fd('A', fd);
 	close(fd);

@@ -40,7 +40,7 @@ char	*ft_strtrim(const char *s1, const char *set)
 /*
 int	main(void)
 {
-	const char	*test = "!!!Hello, World!!!";
+	const char	*test = "!!!Hello ! World!!!";
 	const char	*set = "!";
 	char		*resultat = ft_strtrim(test, set);
 

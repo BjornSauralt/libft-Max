@@ -27,7 +27,7 @@ void	ft_putendl_fd(char *str, int fd)
 /*
 int main(void)
 {
-	int	fd = open("output.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
+	int	fd = open("output.txt", O_WRONLY | O_CREAT, 0644);
     
 	ft_putendl_fd("Hello, World!", fd);
 	close(fd);

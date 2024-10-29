@@ -41,11 +41,11 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 /*
 int	main(void)
 {
-	char src1[] = "Hello, World!";
-	char dst1[20];
+	char src[] = "Hello, World!";
+	char dst[20];
 
-	printf("Avant memmove :%s\n", dst1);
-	ft_memmove(dst1, src1, 13);
-	printf("Après memmove:%s\n", dst1);
+	printf("Avant memmove :%s\n", dst);
+	ft_memmove(dst, src, 13);
+	printf("Après memmove:%s\n", dst);
 	return (0);
 }*/

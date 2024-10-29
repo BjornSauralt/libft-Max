@@ -28,15 +28,15 @@ char	*ft_strrchr(char *str, int car)
 /*
 int	main(void)
 {
-	char	str[] = "Hello, World!";
-	char	characterToFind = 'a';
-	char	*result = ft_strrchr(str, characterToFind);
+	char	str[] = "Haello, Worlad!";
+	char	car = 'a';
+	char	*result = ft_strrchr(str, car);
 
 	if (result != NULL)
 	{
-		printf("'%c' est à l'index : %ld\n", characterToFind, result - str);
+		printf("'%c' est a l'index : %ld\n", car, result - str);
 	}
 	else 
-		printf("'%c' non trouve\n", characterToFind);
+		printf("'%c' non trouve\n", car);
 	return (0);
 }*/
