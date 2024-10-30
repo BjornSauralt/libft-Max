@@ -19,16 +19,16 @@ static int	find_str(char const *s, char c)
 
 	i = 0;
 	nb_str = 0;
-	if (!s)
+	if (!s[0])
 		return (0);
 	while (s[i] && s[i] == c)
 		i++;
 	while (s[i])
 	{
-		if (s[i] && s[i] == c)
+		if (s[i] == c)
 		{
 			nb_str++;
-			while (s[i] == c)
+			while (s[i] && s[i] == c)
 				i++;
 			continue ;
 		}
@@ -101,7 +101,7 @@ char	**ft_split(char const *s, char c)
 int	main(void)
 {
 	char	**result;
-	char	*str = "  tripouille  42  hub";
+	char	*str = "  tripouille  42  ";
 	char	delimiter = ' ';
 	int		i;
 
