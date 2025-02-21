@@ -1,46 +1,44 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: mgarsaul <marvin@42.fr>                    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/10/16 11:19:27 by mgarsaul          #+#    #+#              #
-#    Updated: 2024/10/16 11:19:35 by mgarsaul         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+NAME		=	libft.a
 
-LIBC =        ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
-		ft_isascii.c ft_isdigit.c ft_isprint.c ft_memchr.c \
-		ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c ft_strchr.c \
-		ft_strdup.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strncmp.c \
-		ft_strnstr.c ft_strrchr.c ft_tolower.c ft_toupper.c \
-		ft_itoa.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c \
-		ft_split.c ft_strjoin.c ft_strmapi.c ft_strtrim.c ft_substr.c ft_striteri.c
+CC			=	clang
 
+CFILE        =        ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
+        ft_isascii.c ft_isdigit.c ft_isprint.c ft_memchr.c \
+        ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c ft_strchr.c \
+        ft_strdup.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strncmp.c \
+        ft_strnstr.c ft_strrchr.c ft_tolower.c ft_toupper.c \
+        ft_itoa.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c \
+        ft_split.c ft_strjoin.c ft_strmapi.c ft_strtrim.c ft_substr.c ft_striteri.c \
+        get_next_line.c ft_strncpy.c ft_printchr.c ft_printf.c ft_printhex.c \
+        ft_printnbr.c ft_printpercent.c ft_printptr.c ft_printstr.c \
+        ft_printunsigned.c ft_strcmp.c
 
-OBJS = $(LIBC:.c=.o)
- 
-NAME = libft.a
+CFILE_DIR		=	./src/
 
-CC = gcc
+SRC				=	$(addprefix $(CFILE_DIR), $(CFILE))
 
-CFLAGS = -Wall -Werror -Wextra
+INCLUDE_DIR		=	./includes/
 
-%.o:        %.c
-			$(CC) $(CFLAGS) -c $< -o $@
+FLAG			=	-Wall -Wextra -Werror
 
-$(NAME):    $(OBJS)
-			ar rsc $(NAME) $(OBJS)
+INCLUDE			=	libft.h
 
-all:        $(NAME)
+OBJ				=	$(SRC:.c=.o)
+
+.c.o:
+	$(CC) $(FLAG) -c $< -o $@
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	ar rc $(NAME) $(OBJ)
 
 clean:
-			rm -f $(OBJS)
+	rm -rf $(OBJ)
 
-fclean:        clean
-			rm -f $(NAME)
+fclean: clean
+	rm -rf $(NAME)
 
-re:            fclean all
+re: fclean all
 
-.PHONY:        all clean fclean re bonus
+.PHONY: all clean fclean re
